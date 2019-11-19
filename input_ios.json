@@ -1,0 +1,11 @@
+{ "timeline" :  [
+    { "name" : "Friend Name1", "date" : "Today at 10:00", "discription" : "I realy love it", "image": "friend1", "post_image":"post1"},
+    { "name" : "Friend Name2", "date" : "Nov 18 at 23:45", "discription" : "I realy hate it", "image": "friend", "post_image":"post2"},
+    { "name" : "Friend Name3", "date" : "Nov 17 at 16:20", "discription" : "I realy like it", "image": "friend2", "post_image":"post1"},
+  { "name" : "Friend Name4", "date" : "Nov 16 at 19:20", "discription" : "Not feeling well!", "image": "friend1", "post_image":"post2"},
+  { "name" : "Friend Name5", "date" : "Nov 15 at 11:20", "discription" : "Not really bad", "image": "friend2", "post_image":"post1"},
+  { "name" : "Friend Name6", "date" : "Nov 12 at 16:00", "discription" : "I realy nice to meet", "image": "", "post_image":"post2"},
+  { "name" : "Friend Name7", "date" : "Nov 10 at 16:20", "discription" : "I proud of my work", "image": "friend2", "post_image":"post1"},
+  { "name" : "Friend Name8", "date" : "Nov 17 at 16:20", "discription" : "I m not done", "image": "friend1", "post_image":"post1"},
+  { "name" : "Friend Name9", "date" : "Nov 17 at 01:45", "discription" : "Beginning today, \ntreat everyone you meet as if they were going to be dead by midnight. \nExtend to them all the care, kindness and understanding you can muster, and do it with no thought of any reward. ", "image": "", "post_image":"post2"}
+] }

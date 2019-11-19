@@ -17,27 +17,29 @@ class timelineCell: UITableViewCell {
     @IBOutlet var stckV: UIStackView!
     @IBOutlet var profileIMG: UIImageView!
     @IBOutlet var postIMG: UIImageView!
-
     var imgN = UIImageView()
     var seeMoreBtn = UIButton()
     let imgArr = ["like","comment","share"]
     let nameArr = ["Like"," Comment","Share"]
     var xOffset:CGFloat = 10
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+   
+        newsubView()
+        subViewForBottom()
+
+    }
+    func newsubView() {
         imgN.frame = CGRect(x: (timeLbl.frame.width)-55, y: 5, width: 20, height: 20)
-       imgN.image = UIImage(named:"notification")
-       timeLbl.addSubview((imgN))
+        imgN.image = UIImage(named:"notification")
+        timeLbl.addSubview((imgN))
         seeMoreBtn.frame = CGRect(x: (discLbl.frame.width)/2-20, y: discLbl.frame.width/8, width: 100, height: 20)
         seeMoreBtn.backgroundColor = .white
         seeMoreBtn.setTitle("See More", for: .normal)
         seeMoreBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
         discLbl.addSubview(seeMoreBtn)
-        
-     
         stckV.addBottomBorderWithColor(color: #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1), width: 0.5)
-
-        subViewForBottom()
 
     }
     func subViewForBottom() {
@@ -68,7 +70,6 @@ class timelineCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

@@ -17,42 +17,34 @@ class HomeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var timelArr = [[String:Any]]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        feedTbl.allowsSelection = false
         
-//        let lines = str.components(separatedBy: "\n")
-
-        // Do any additional setup after loading the view.
+        feedTbl.allowsSelection = false
+        setViewForTxt()
+        readJson()
+        
+    }
+    func setViewForTxt() {
         searchTxt.attributedPlaceholder = NSAttributedString(string: "Search",
-                                                                attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
+                                                             attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
         searchTxt.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: searchTxt.frame.height))
         searchTxt.leftViewMode = .always
         let searchIcon = UIImageView()
         searchIcon.frame = CGRect(x: 5, y: 5, width: 20, height: 20)
         searchIcon.image = UIImage(named:"search")
         searchTxt.addSubview(searchIcon)
-        
-//        img.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-        readJson()
-        
     }
-    
     func readJson() {
         let url = Bundle.main.url(forResource: "input_ios", withExtension: "json")
         let data = NSData(contentsOf: url!)
         do {
             let object = try JSONSerialization.jsonObject(with: data! as Data, options: .allowFragments)
-//            print(object)
             if let dictionary = object as? [String: AnyObject] {
-//                print(dictionary)
                 if let Timeline = dictionary["timeline"] as? [[String:Any]] {
                     timelArr = Timeline
                     feedTbl.reloadData()
-//                readJSONObject(Timeline: Timeline)
                 }
             }
         } catch {
-            // Handle Error
         }
     }
 
